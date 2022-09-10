@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+    </head>
+    <body class="antialiased bg-zinc-900 font-sans leading-normal text-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="flex h-screen flex-col justify-between">
+                <header class="flex items-center justify-between py-10">
+                    {{ partial:nav }}
+                </header>
+
+                <main class="mb-auto">
+                    {{ template_content }}
+                </main>
+            </div>
+        </div>
+        <script src="{{ mix src='/js/site.js' }}"></script>
+    </body>
+</html>

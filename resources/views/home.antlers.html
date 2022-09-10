@@ -1,0 +1,10 @@
+<h1 class="text-xl text-bold">Queremos comer!!!</h1>
+
+<div class="grid-cols-2 gap-2">
+    {{ collection:posts }}
+        <a href="{{ url }}">
+            <h3>{{ title }}</h3>
+            <p>{{ date }}</p>
+        </a>
+    {{ /collection:posts }}
+</div>
