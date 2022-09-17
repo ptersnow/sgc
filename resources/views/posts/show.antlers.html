@@ -1,11 +1,50 @@
-<h1>{{ title }}</h1>
+<article>
+    <div>
+        <header>
+            <div class="space-y-5 text-center">
+                <div class="space-y-1">
+                    <div>Publicado em</div>
+                    <div class="text-base font-medium leading-6 text-gray-400">
+                        <time>{{ date }}</time>
+                    </div>
+                </div>
+                <div>
+                    <h1
+                        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-100"
+                    >
+                        {{ title }}
+                    </h1>
+                </div>
+            </div>
+        </header>
 
-<div>
-    {{ categorias }}
-        <a href="{{ url }}">{{ title }}</a>
-    {{ /categorias }}
-</div>
+        <div
+            class="divide-y pb-8 divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
+            style="grid-template-rows: auto 1fr;"
+        >
+            <div class="divide-y divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+                <div class="max-w-none pt-10 pb-8 prose-dark">
+                    {{ content }}
+                </div>
+            </div>
 
-<div>
-    {{ content }}
-</div>
+            <aside>
+                <div class="text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
+                    <div class="py-4">
+                        <h2 class="text-xs tracking-wide text-gray-400">CATEGORIAS</h2>
+                        <div class="flex flex-wrap">
+                            {{ categorias }}
+                                <a
+                                    href="{{ url }}"
+                                    class="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-400"
+                                >
+                                    {{ title }}
+                                </a>
+                            {{ /categorias }}
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</article>
