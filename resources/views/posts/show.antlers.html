@@ -22,6 +22,21 @@
             class="divide-y pb-8 divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
             style="grid-template-rows: auto 1fr;"
         >
+
+            <div class="pt-6 pb-10 border-b border-gray-700">
+                <div>Autor</div>
+                <div>
+                    <ul class="flex justify-center space-x-8">
+                        <li class="flex items-center space-x-2">
+                            <div class="whitespace-nowrap text-sm font-medium leading-5">
+                                <span>Nome</span>
+                                <span class="text-gray-100">{{ author:name }}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="divide-y divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
                 <div class="max-w-none pt-10 pb-8 prose-dark">
                     {{ content }}
@@ -43,6 +58,10 @@
                             {{ /categorias }}
                         </div>
                     </div>
+                </div>
+
+                <div class="pt-4">
+                    <a class="text-primary-500 hover:text-primary-400" href="/posts"><- Voltar para as postagens</a>
                 </div>
             </aside>
         </div>
